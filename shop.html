@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر موبيليات الذوق الرفيع - ورق الذهب وأدوات التذهيب</title>
+    <meta name="description" content="متجر موبيليات الذوق الرفيع لبيع ورق الذهب وأدوات التذهيب والباتينة عالية الجودة">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="shop.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1>موبيليات الذوق الرفيع</h1>
+                    <span>المتجر الإلكتروني</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="#products">المنتجات</a></li>
+                    <li><a href="#categories">الفئات</a></li>
+                    <li><a href="index.html#contact">اتصل بنا</a></li>
+                    <li>
+                        <a href="#" class="cart-icon" onclick="toggleCart()">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Shop Hero Section -->
+    <section class="shop-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>متجر ورق الذهب والأدوات المتخصصة</h1>
+                <p>اكتشف مجموعتنا المتميزة من ورق الذهب عالي الجودة وأدوات التذهيب الاحترافية</p>
+                <a href="#products" class="shop-btn">تسوق الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>فئات المنتجات</h2>
+                <p>اختر من مجموعة واسعة من المنتجات المتخصصة</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card" data-category="gold-leaf">
+                    <div class="category-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>ورق الذهب</h3>
+                    <p>ورق ذهب عالي الجودة من مختلف البلدان</p>
+                    <button class="filter-btn" onclick="filterProducts('gold-leaf')">عرض المنتجات</button>
+                </div>
+                <div class="category-card" data-category="tools">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>أدوات التذهيب</h3>
+                    <p>أدوات احترافية لتطبيق ورق الذهب</p>
+                    <button class="filter-btn" onclick="filterProducts('tools')">عرض المنتجات</button>
+                </div>
+                <div class="category-card" data-category="materials">
+                    <div class="category-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>مواد الباتينة</h3>
+                    <p>مواد متخصصة لتقنية الباتينة</p>
+                    <button class="filter-btn" onclick="filterProducts('materials')">عرض المنتجات</button>
+                </div>
+                <div class="category-card" data-category="accessories">
+                    <div class="category-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3>إكسسوارات</h3>
+                    <p>إكسسوارات وأدوات مساعدة</p>
+                    <button class="filter-btn" onclick="filterProducts('accessories')">عرض المنتجات</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>منتجاتنا المميزة</h2>
+                <p>اختر من مجموعة واسعة من المنتجات عالية الجودة</p>
+            </div>
+            
+            <div class="filter-tabs">
+                <button class="filter-tab active" onclick="filterProducts('all')">الكل</button>
+                <button class="filter-tab" onclick="filterProducts('gold-leaf')">ورق الذهب</button>
+                <button class="filter-tab" onclick="filterProducts('tools')">الأدوات</button>
+                <button class="filter-tab" onclick="filterProducts('materials')">المواد</button>
+                <button class="filter-tab" onclick="filterProducts('accessories')">الإكسسوارات</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>سلة التسوق</h3>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>المجموع: <span id="cartTotal">0</span> جنيه</strong>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">
+                <i class="fas fa-credit-card"></i>
+                إتمام الشراء
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+    <!-- Product Modal -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeProductModal()">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeCheckoutModal()">&times;</span>
+            <div class="checkout-content">
+                <h2>إتمام الطلب</h2>
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label>الاسم الكامل</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>رقم الهاتف</label>
+                        <input type="tel" required>
+                    </div>
+                    <div class="form-group">
+                        <label>العنوان</label>
+                        <textarea required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>طريقة الدفع</label>
+                        <select required>
+                            <option value="">اختر طريقة الدفع</option>
+                            <option value="cash">الدفع عند الاستلام</option>
+                            <option value="transfer">تحويل بنكي</option>
+                            <option value="vodafone">فودافون كاش</option>
+                        </select>
+                    </div>
+                    <div class="order-summary">
+                        <h3>ملخص الطلب</h3>
+                        <div id="orderItems"></div>
+                        <div class="total-amount">
+                            <strong>المجموع الكلي: <span id="finalTotal">0</span> جنيه</strong>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-order-btn">تأكيد الطلب</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>موبيليات الذوق الرفيع</h3>
+                    <p>متجرك المتخصص في ورق الذهب وأدوات التذهيب عالية الجودة</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="#products">المنتجات</a></li>
+                        <li><a href="index.html#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>معلومات الاتصال</h4>
+                    <p><i class="fas fa-phone"></i> 01065040078</p>
+                    <p><i class="fas fa-phone"></i> 01090603860</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 موبيليات الذوق الرفيع. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="shop.js"></script>
+</body>
+</html>
+

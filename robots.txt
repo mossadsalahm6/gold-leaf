@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://goldleaf-furniture.com/sitemap.xml
+
+# Disallow specific files
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.pdf$
+Disallow: /temp/
+
+# Allow important directories
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: /blog/
+
+# Crawl delay (optional)
+Crawl-delay: 1
+
