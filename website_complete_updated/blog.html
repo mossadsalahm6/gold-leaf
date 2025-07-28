@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المدونة - موبيليات الذوق الرفيع للديكورات المنزلية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="blog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><a href="index.html">موبيليات الذوق الرفيع</a></h1>
+                    <p>للديكورات المنزلية</p>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home" class="nav-link">الرئيسية</a></li>
+                    <li><a href="index.html#services" class="nav-link">خدماتنا</a></li>
+                    <li><a href="index.html#gold-leaf" class="nav-link">ورق الذهب</a></li>
+                    <li><a href="index.html#patina" class="nav-link">الباتينة</a></li>
+                    <li><a href="index.html#videos" class="nav-link">فيديوهات تعليمية</a></li>
+                    <li><a href="index.html#before-after" class="nav-link">قبل وبعد</a></li>
+                    <li><a href="index.html#gallery" class="nav-link">معرض الصور</a></li>
+                    <li><a href="blog.html" class="nav-link active">المدونة</a></li>
+                    <li><a href="index.html#contact" class="nav-link">اتصل بنا</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <div class="blog-hero-content">
+                <h1 class="blog-hero-title">مدونة الذوق الرفيع</h1>
+                <p class="blog-hero-subtitle">اكتشف أحدث صيحات الديكور وأسرار فن ورق الذهب والباتينة</p>
+                <div class="blog-search">
+                    <input type="text" placeholder="ابحث في المقالات..." id="blog-search-input">
+                    <button type="button" id="blog-search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section class="blog-categories">
+        <div class="container">
+            <div class="categories-filter">
+                <button class="category-btn active" data-category="all">جميع المقالات</button>
+                <button class="category-btn" data-category="decoration">الديكورات</button>
+                <button class="category-btn" data-category="gold-leaf">ورق الذهب</button>
+                <button class="category-btn" data-category="patina">الباتينة</button>
+                <button class="category-btn" data-category="tips">نصائح</button>
+                <button class="category-btn" data-category="projects">مشاريعنا</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="blog-posts">
+        <div class="container">
+            <div class="blog-grid">
+                <!-- Featured Article -->
+                <article class="blog-post featured" data-category="gold-leaf">
+                    <div class="post-image">
+                        <img src="images/blog/featured-gold-leaf.jpg" alt="أسرار تطبيق ورق الذهب">
+                        <div class="post-badge">مقال مميز</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">ورق الذهب</span>
+                            <span class="post-date">15 يونيو 2025</span>
+                        </div>
+                        <h2 class="post-title">أسرار تطبيق ورق الذهب: دليل شامل للمبتدئين والمحترفين</h2>
+                        <p class="post-excerpt">
+                            اكتشف التقنيات المتقدمة لتطبيق ورق الذهب على الأثاث والديكورات. من اختيار النوع المناسب إلى التشطيب النهائي، 
+                            نقدم لك دليلاً شاملاً يضمن نتائج احترافية مذهلة.
+                        </p>
+                        <a href="blog-post-1.html" class="read-more-btn">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+
+                <!-- Regular Articles -->
+                <article class="blog-post" data-category="decoration">
+                    <div class="post-image">
+                        <img src="images/blog/modern-classic-decor.jpg" alt="الديكور الكلاسيكي العصري">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">الديكورات</span>
+                            <span class="post-date">12 يونيو 2025</span>
+                        </div>
+                        <h3 class="post-title">الديكور الكلاسيكي العصري: كيف تمزج بين الأناقة والحداثة</h3>
+                        <p class="post-excerpt">
+                            تعلم كيفية دمج العناصر الكلاسيكية مع اللمسات العصرية لإنشاء مساحات أنيقة وعملية في نفس الوقت.
+                        </p>
+                        <a href="blog-post-2.html" class="read-more-btn">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-post" data-category="patina">
+                    <div class="post-image">
+                        <img src="images/blog/patina-techniques.jpg" alt="تقنيات الباتينة">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">الباتينة</span>
+                            <span class="post-date">10 يونيو 2025</span>
+                        </div>
+                        <h3 class="post-title">تقنيات الباتينة المتقدمة: إضفاء المظهر العتيق بطريقة احترافية</h3>
+                        <p class="post-excerpt">
+                            استكشف أحدث تقنيات الباتينة وكيفية تطبيقها على مختلف أنواع الأسطح للحصول على مظهر عتيق أصيل.
+                        </p>
+                        <a href="blog-post-3.html" class="read-more-btn">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-post" data-category="tips">
+                    <div class="post-image">
+                        <img src="images/blog/furniture-care.jpg" alt="العناية بالأثاث المذهب">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">نصائح</span>
+                            <span class="post-date">8 يونيو 2025</span>
+                        </div>
+                        <h3 class="post-title">العناية بالأثاث المذهب: نصائح للحفاظ على بريقه لسنوات</h3>
+                        <p class="post-excerpt">
+                            دليل شامل للعناية بالأثاث المذهب وحمايته من العوامل الجوية والاستخدام اليومي.
+                        </p>
+                        <a href="blog-post-4.html" class="read-more-btn">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-post" data-category="projects">
+                    <div class="post-image">
+                        <img src="images/blog/luxury-salon-project.jpg" alt="مشروع صالون فاخر">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">مشاريعنا</span>
+                            <span class="post-date">5 يونيو 2025</span>
+                        </div>
+                        <h3 class="post-title">مشروع صالون فاخر: تحويل مساحة عادية إلى قصر ملكي</h3>
+                        <p class="post-excerpt">
+                            شاهد كيف حولنا صالوناً عادياً إلى تحفة فنية باستخدام ورق الذهب الإيطالي وتقنيات الباتينة المتقدمة.
+                        </p>
+                        <a href="blog-post-5.html" class="read-more-btn">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-post" data-category="decoration">
+                    <div class="post-image">
+                        <img src="images/blog/color-psychology.jpg" alt="سيكولوجية الألوان">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">الديكورات</span>
+                            <span class="post-date">3 يونيو 2025</span>
+                        </div>
+                        <h3 class="post-title">سيكولوجية الألوان في الديكور: كيف تؤثر الألوان على مزاجك</h3>
+                        <p class="post-excerpt">
+                            اكتشف كيف تؤثر الألوان المختلفة على الحالة النفسية وكيفية اختيار الألوان المناسبة لكل غرفة.
+                        </p>
+                        <a href="blog-post-6.html" class="read-more-btn">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="blog-pagination">
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn next">التالي <i class="fas fa-chevron-left"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>اشترك في نشرتنا الإخبارية</h2>
+                <p>احصل على أحدث المقالات والنصائح مباشرة في بريدك الإلكتروني</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                    <button type="submit">اشترك الآن</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>موبيليات الذوق الرفيع</h3>
+                    <p>نحن متخصصون في تصميم وتنفيذ أرقى الديكورات المنزلية باستخدام أحدث التقنيات وأجود المواد.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>خدماتنا</h4>
+                    <ul>
+                        <li><a href="index.html#gold-leaf">تذهيب الأثاث</a></li>
+                        <li><a href="index.html#patina">تقنية الباتينة</a></li>
+                        <li><a href="index.html#services">الديكورات المنزلية</a></li>
+                        <li><a href="index.html#services">التشطيبات الفاخرة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html#home">الرئيسية</a></li>
+                        <li><a href="index.html#services">خدماتنا</a></li>
+                        <li><a href="index.html#gallery">معرض الصور</a></li>
+                        <li><a href="blog.html">المدونة</a></li>
+                        <li><a href="index.html#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> 01065040078</p>
+                        <p><i class="fas fa-phone"></i> 01090603860</p>
+                        <p><i class="fas fa-envelope"></i> info@thouqrafee.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 موبيليات الذوق الرفيع. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="blog.js"></script>
+</body>
+</html>
+
